@@ -7,6 +7,34 @@ hide:
 
 ## Latest Changes
 
+### Internal
+
+* 👷 Do not run codspeed with coverage as it's not tracked. PR [#14966](https://github.com/fastapi/fastapi/pull/14966) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Do not include benchmark tests in coverage to speed up coverage processing. PR [#14965](https://github.com/fastapi/fastapi/pull/14965) by [@tiangolo](https://github.com/tiangolo).
+
+## 0.131.0
+
+### Breaking Changes
+
+* 🗑️ Deprecate `ORJSONResponse` and `UJSONResponse`. PR [#14964](https://github.com/fastapi/fastapi/pull/14964) by [@tiangolo](https://github.com/tiangolo).
+
+## 0.130.0
+
+### Features
+
+* ✨ Serialize JSON response with Pydantic (in Rust), when there's a Pydantic return type or response model. PR [#14962](https://github.com/fastapi/fastapi/pull/14962) by [@tiangolo](https://github.com/tiangolo).
+    * This results in 2x (or more) performance increase for JSON responses.
+    * New docs: [Custom Response - JSON Performance](https://fastapi.tiangolo.com/advanced/custom-response/#json-performance).
+
+## 0.129.2
+
+### Internal
+
+* ⬆️ Upgrade pytest. PR [#14959](https://github.com/fastapi/fastapi/pull/14959) by [@tiangolo](https://github.com/tiangolo).
+* 👷 Fix CI, do not attempt to publish `fastapi-slim`. PR [#14958](https://github.com/fastapi/fastapi/pull/14958) by [@tiangolo](https://github.com/tiangolo).
+* ➖ Drop support for `fastapi-slim`, no more versions will be released, use only `"fastapi[standard]"` or `fastapi`. PR [#14957](https://github.com/fastapi/fastapi/pull/14957) by [@tiangolo](https://github.com/tiangolo).
+* 🔧 Update pyproject.toml, remove unneeded lines. PR [#14956](https://github.com/fastapi/fastapi/pull/14956) by [@tiangolo](https://github.com/tiangolo).
+
 ## 0.129.1
 
 ### Fixes

@@ -1083,12 +1083,10 @@ all = [
     { name = "httpx" },
     { name = "itsdangerous" },
     { name = "jinja2" },
-    { name = "orjson" },
     { name = "pydantic-extra-types" },
     { name = "pydantic-settings" },
     { name = "python-multipart" },
     { name = "pyyaml" },
-    { name = "ujson" },
     { name = "uvicorn", extra = ["standard"] },
 ]
 standard = [
@@ -1134,6 +1132,7 @@ dev = [
     { name = "mkdocs-redirects" },
     { name = "mkdocstrings", extra = ["python"] },
     { name = "mypy" },
+    { name = "orjson" },
     { name = "pillow" },
     { name = "playwright" },
     { name = "prek" },
@@ -1151,6 +1150,7 @@ dev = [
     { name = "typer" },
     { name = "types-orjson" },
     { name = "types-ujson" },
+    { name = "ujson" },
 ]
 docs = [
     { name = "black" },
@@ -1165,15 +1165,19 @@ docs = [
     { name = "mkdocs-material" },
     { name = "mkdocs-redirects" },
     { name = "mkdocstrings", extra = ["python"] },
+    { name = "orjson" },
     { name = "pillow" },
     { name = "python-slugify" },
     { name = "pyyaml" },
     { name = "ruff" },
     { name = "typer" },
+    { name = "ujson" },
 ]
 docs-tests = [
     { name = "httpx" },
+    { name = "orjson" },
     { name = "ruff" },
+    { name = "ujson" },
 ]
 github-actions = [
     { name = "httpx" },
@@ -1192,6 +1196,7 @@ tests = [
     { name = "httpx" },
     { name = "inline-snapshot" },
     { name = "mypy" },
+    { name = "orjson" },
     { name = "pwdlib", extra = ["argon2"] },
     { name = "pyjwt" },
     { name = "pytest" },
@@ -1202,6 +1207,7 @@ tests = [
     { name = "strawberry-graphql" },
     { name = "types-orjson" },
     { name = "types-ujson" },
+    { name = "ujson" },
 ]
 translations = [
     { name = "gitpython" },
@@ -1225,7 +1231,6 @@ requires-dist = [
     { name = "jinja2", marker = "extra == 'all'", specifier = ">=3.1.5" },
     { name = "jinja2", marker = "extra == 'standard'", specifier = ">=3.1.5" },
     { name = "jinja2", marker = "extra == 'standard-no-fastapi-cloud-cli'", specifier = ">=3.1.5" },
-    { name = "orjson", marker = "extra == 'all'", specifier = ">=3.9.3" },
     { name = "pydantic", specifier = ">=2.7.0" },
     { name = "pydantic-extra-types", marker = "extra == 'all'", specifier = ">=2.0.0" },
     { name = "pydantic-extra-types", marker = "extra == 'standard'", specifier = ">=2.0.0" },
@@ -1240,7 +1245,6 @@ requires-dist = [
     { name = "starlette", specifier = ">=0.40.0,<1.0.0" },
     { name = "typing-extensions", specifier = ">=4.8.0" },
     { name = "typing-inspection", specifier = ">=0.4.2" },
-    { name = "ujson", marker = "extra == 'all'", specifier = ">=5.8.0" },
     { name = "uvicorn", extras = ["standard"], marker = "extra == 'all'", specifier = ">=0.12.0" },
     { name = "uvicorn", extras = ["standard"], marker = "extra == 'standard'", specifier = ">=0.12.0" },
     { name = "uvicorn", extras = ["standard"], marker = "extra == 'standard-no-fastapi-cloud-cli'", specifier = ">=0.12.0" },
@@ -1269,6 +1273,7 @@ dev = [
     { name = "mkdocs-redirects", specifier = ">=1.2.1,<1.3.0" },
     { name = "mkdocstrings", extras = ["python"], specifier = ">=0.30.1" },
     { name = "mypy", specifier = ">=1.14.1" },
+    { name = "orjson", specifier = ">=3.9.3" },
     { name = "pillow", specifier = ">=11.3.0" },
     { name = "playwright", specifier = ">=1.57.0" },
     { name = "prek", specifier = ">=0.2.22" },
@@ -1276,7 +1281,7 @@ dev = [
     { name = "pydantic-ai", specifier = ">=0.4.10" },
     { name = "pygithub", specifier = ">=2.8.1" },
     { name = "pyjwt", specifier = ">=2.9.0" },
-    { name = "pytest", specifier = ">=7.1.3,<9.0.0" },
+    { name = "pytest", specifier = ">=9.0.0" },
     { name = "pytest-codspeed", specifier = ">=4.2.0" },
     { name = "python-slugify", specifier = ">=8.0.4" },
     { name = "pyyaml", specifier = ">=5.3.1,<7.0.0" },
@@ -1286,6 +1291,7 @@ dev = [
     { name = "typer", specifier = ">=0.21.1" },
     { name = "types-orjson", specifier = ">=3.6.2" },
     { name = "types-ujson", specifier = ">=5.10.0.20240515" },
+    { name = "ujson", specifier = ">=5.8.0" },
 ]
 docs = [
     { name = "black", specifier = ">=25.1.0" },
@@ -1300,15 +1306,19 @@ docs = [
     { name = "mkdocs-material", specifier = ">=9.7.0" },
     { name = "mkdocs-redirects", specifier = ">=1.2.1,<1.3.0" },
     { name = "mkdocstrings", extras = ["python"], specifier = ">=0.30.1" },
+    { name = "orjson", specifier = ">=3.9.3" },
     { name = "pillow", specifier = ">=11.3.0" },
     { name = "python-slugify", specifier = ">=8.0.4" },
     { name = "pyyaml", specifier = ">=5.3.1,<7.0.0" },
     { name = "ruff", specifier = ">=0.14.14" },
     { name = "typer", specifier = ">=0.21.1" },
+    { name = "ujson", specifier = ">=5.8.0" },
 ]
 docs-tests = [
     { name = "httpx", specifier = ">=0.23.0,<1.0.0" },
+    { name = "orjson", specifier = ">=3.9.3" },
     { name = "ruff", specifier = ">=0.14.14" },
+    { name = "ujson", specifier = ">=5.8.0" },
 ]
 github-actions = [
     { name = "httpx", specifier = ">=0.27.0,<1.0.0" },
@@ -1327,9 +1337,10 @@ tests = [
     { name = "httpx", specifier = ">=0.23.0,<1.0.0" },
     { name = "inline-snapshot", specifier = ">=0.21.1" },
     { name = "mypy", specifier = ">=1.14.1" },
+    { name = "orjson", specifier = ">=3.9.3" },
     { name = "pwdlib", extras = ["argon2"], specifier = ">=0.2.1" },
     { name = "pyjwt", specifier = ">=2.9.0" },
-    { name = "pytest", specifier = ">=7.1.3,<9.0.0" },
+    { name = "pytest", specifier = ">=9.0.0" },
     { name = "pytest-codspeed", specifier = ">=4.2.0" },
     { name = "pyyaml", specifier = ">=5.3.1,<7.0.0" },
     { name = "ruff", specifier = ">=0.14.14" },
@@ -1337,6 +1348,7 @@ tests = [
     { name = "strawberry-graphql", specifier = ">=0.200.0,<1.0.0" },
     { name = "types-orjson", specifier = ">=3.6.2" },
     { name = "types-ujson", specifier = ">=5.10.0.20240515" },
+    { name = "ujson", specifier = ">=5.8.0" },
 ]
 translations = [
     { name = "gitpython", specifier = ">=3.1.46" },
@@ -4330,7 +4342,7 @@ wheels = [
 
 [[package]]
 name = "pytest"
-version = "8.4.2"
+version = "9.0.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "colorama", marker = "sys_platform == 'win32'" },
@@ -4341,9 +4353,9 @@ dependencies = [
     { name = "pygments" },
     { name = "tomli", marker = "python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/a3/5c/00a0e072241553e1a7496d638deababa67c5058571567b92a7eaa258397c/pytest-8.4.2.tar.gz", hash = "sha256:86c0d0b93306b961d58d62a4db4879f27fe25513d4b969df351abdddb3c30e01", size = 1519618, upload-time = "2025-09-04T14:34:22.711Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/d1/db/7ef3487e0fb0049ddb5ce41d3a49c235bf9ad299b6a25d5780a89f19230f/pytest-9.0.2.tar.gz", hash = "sha256:75186651a92bd89611d1d9fc20f0b4345fd827c41ccd5c299a868a05d70edf11", size = 1568901, upload-time = "2025-12-06T21:30:51.014Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/a8/a4/20da314d277121d6534b3a980b29035dcd51e6744bd79075a6ce8fa4eb8d/pytest-8.4.2-py3-none-any.whl", hash = "sha256:872f880de3fc3a5bdc88a11b39c9710c3497a547cfa9320bc3c5e62fbf272e79", size = 365750, upload-time = "2025-09-04T14:34:20.226Z" },
+    { url = "https://files.pythonhosted.org/packages/3b/ab/b3226f0bd7cdcf710fbede2b3548584366da3b19b5021e74f5bde2a8fa3f/pytest-9.0.2-py3-none-any.whl", hash = "sha256:711ffd45bf766d5264d487b917733b453d917afd2b0ad65223959f59089f875b", size = 374801, upload-time = "2025-12-06T21:30:49.154Z" },
 ]
 
 [[package]]
